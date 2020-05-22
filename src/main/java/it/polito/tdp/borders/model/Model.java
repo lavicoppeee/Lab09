@@ -67,10 +67,7 @@ public class Model {
 	 */
 	public Collection<Country> getCountries() {
 		// TODO Auto-generated method stub
-		if (countries == null) {
-			return new ArrayList<Country>();
-		}
-		return countries;
+		return this.graph.vertexSet();
 	}
 	
 	/**
@@ -109,7 +106,6 @@ public class Model {
 
 		List<Country> visited = new LinkedList<Country>();
 
-		// Versione 2 : utilizzo un DepthFirstIterator
 		GraphIterator<Country, DefaultEdge> dfv = new DepthFirstIterator<Country, DefaultEdge>(graph, selectedCountry);
 		while (dfv.hasNext()) {
 			visited.add(dfv.next());
