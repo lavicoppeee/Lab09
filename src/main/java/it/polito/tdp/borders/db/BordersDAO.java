@@ -91,44 +91,6 @@ public class BordersDAO {
 			}
 		}
 	
-	
-	
-/*
-	public List<Border> getBorder(Map<Integer, Country> idMap) {
-		String sql= "SELECT c.state1no as Country1, c.state2no as as Country2 " + 
-				"FROM contiguity as c " + 
-				"WHERE c.conttype=1 " + 
-				"GROUP BY c.state1no, c.state2no ";
-		
-		List<Border> result= new ArrayList<Border>();
-		
-		try {
-			Connection conn = ConnectDB.getConnection();
-			PreparedStatement st = conn.prepareStatement(sql);
-			ResultSet rs = st.executeQuery();
-			
-			while(rs.next()) {
-				Country c1 = idMap.get(rs.getInt("Country1"));
-				Country c2 = idMap.get(rs.getInt("Country2"));
-				
-				if(c1!= null && c2!= null) {
-					result.add(new Border(c1, c2));
-				} else{
-					System.out.println("ERRORE IN GET BORDER");
-				}
-
-			}
-			conn.close();
-		}catch (SQLException e) {
-			e.printStackTrace();
-			System.out.println("Errore connessione al database");
-			throw new RuntimeException("Error Connection Database");
-		}
-		
-		return result;
-	} 
-	
-	*/
 				
 				
 				
