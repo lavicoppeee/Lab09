@@ -56,7 +56,7 @@ public class Model {
 
 		//System.out.format("Inseriti: %d vertici, %d archi\n", graph.vertexSet().size(), graph.edgeSet().size());
 
-		countries = new ArrayList<>(graph.vertexSet());
+		
 		
 		
 		}
